@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>WasteX Login</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h2>WasteX LOGIN</h2>
+      </div>
+      <form id="form" class="form">
+        <div class="form-control">
+          <label>Email</label>
+          <input
+            type="email"
+            name=""
+            id="email"
+            placeholder="Enter email"
+            class=""
+            autocomplete="off"
+          />
+          <i class="fas fa-check-square"></i>
+          <i class="fas fa-exclamation-triangle"></i>
+          <small>Error</small>
+        </div>
+        <div class="form-control">
+          <label>Password</label>
+          <input
+            type="password"
+            name=""
+            id="password"
+            placeholder="Enter password"
+            class=""
+          />
+          <i class="fas fa-check-square"></i>
+          <i class="fas fa-exclamation-triangle"></i>
+          <small>Error</small>
+        </div>
+        <input type="submit" name="" class="btn" value="Login" />
+      </form>
+    </div>
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <script type="text/javascript">
+      const form = document.getElementById('form');
+      const email = document.getElementById('email');
+      const password = document.getElementById('password');
+
+      form.addEventListener('submit',(event) => {
+        event.preventDefault();
+        validate();
+      })
+
+      const sendData = (sr,count) => {
+        if(sr === count) {
+          alert('Login successful');
+          swal("Welcome! ", "Login Success");
+          location.href = `../dash.html`
+        }
+      }
+
+      const success = () => {
+        let formCnf = document.getElementsByClassName('form-control');
+        
+        var count=formCnf.length-1;
+        for(var i=0;i<formCnf.length;i++) {
+          if(formCnf[i].className === 'form-control success') {
+            var sr=0+i;
+            console.log(sr);
+            sendData(sr,count);
+          } else {
+            return false;
+          }
+        }
+      }
+
+      const isEmail = (emailVal) => {
+        var atSymbol = emailVal.indexOf('@');
+        if(atSymbol<1)
+          return false;
+        var dot = emailVal.lastIndexOf('.');
+        if(dot<= atSymbol+2)
+          return false;
+        if(dot===emailVal.length-1)
+          return false;
+          return true;
+      }
+
+      const validate = () => {
+        const emailVal = email.value.trim();
+        const passwordVal = password.value.trim();
+      
+        if(emailVal === ""){
+          setError(email, 'email cant be blank');
+        } else if(!isEmail(emailVal)){
+          setError(email, 'invalid email');
+        } else {
+          setSuccess(email);
+        }
+
+        if(passwordVal === ""){
+          setError(password, 'password cant be blank');
+        } else if(passwordVal.length <= 5){
+          setError(password, 'password must be min 6 char');
+        } else {
+          setSuccess(password);
+        }
+        success();
+      }
+
+      function setError(input, errors) {
+        const formControl = input.parentElement;
+        const small = formControl.querySelector('small');
+        formControl.className = "form-control error"
+        small.innerText = errors;
+      }
+
+      function setSuccess(input) {
+        const formControl = input.parentElement;
+        formControl.className = "form-control success"
+      }
+
+    </script>  
+  </body>
+</html>
