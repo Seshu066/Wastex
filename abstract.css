@@ -1,0 +1,95 @@
+h1 {
+    font-family: "Gluten";
+    font-size: 30px;
+    font-style: none;
+    font-weight: 100;
+    text-align: left;
+    text-decoration: none;
+    text-indent: 30px;
+    text-transform: none;
+}
+p{
+    font-family: "Times New Roman";
+    font-size: 30px;
+    font-style: none;
+    font-weight: 100;
+    text-align: center;
+    text-decoration: none;
+    text-indent: 30px;
+    text-transform: none;
+    color: rgb(9, 31, 1)
+
+}
+body {
+    background-color: #32502E;
+}
+td {
+    font-size: 20px;
+    text-align: center;
+    color: beige;
+}
+th{
+    font-size: 25px;
+    color:beige;
+}
+.modules{
+    color: #6ECB63;
+}
+.descriptions{
+    font-family: 'Roboto Slab', serif;
+    font-size: 20px;
+    color: blanchedalmond;
+}
+img{
+    width: 400px;
+    
+}
+.first-division{
+    color: rgb(7, 20, 20);
+    background-color: #B1E693;
+}
+.logo{
+    width:100px;
+    position: relative;
+    top: 0;
+    float: left;
+    justify-content: flex-start;
+}
+
+ .container {
+    max-width: 1500px;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 2rem;
+  }
+  
+  .navbar {
+    font-size: 1.3rem;
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+    background-color: black;
+    color: #14ee80;
+  }
+  
+  .navbar .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+  }
+  
+  .navbar .logo {
+    font-size: 2rem;
+  }
+  .title{
+    margin: 10px;
+    margin-right:1200px;
+  }
+
+  .moto{
+      width: auto;
+      margin-left: 400px;
+  }
+  
+  
+  
+  
