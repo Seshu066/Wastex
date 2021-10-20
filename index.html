@@ -40,10 +40,9 @@
           <div>
             <h1>WasteX</h1>
             <p>
-                Recycle your trash or trash our earth. 
-                <!--  -->
+                Recycle your trash or trash our earth.
             </p>
-            <a href="#about" class="btn">Get started</a>
+            <a id="get_started" href="#about" class="btn" role="button">Get started</a>
           </div>
           <img src="images/WasteX.png" alt="" />
         </div>
@@ -238,6 +237,15 @@
         </div>
       </footer>
 
-      
+      <script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+
+  <script>
+    $(document).ready(fucntion() {
+      $('#get_started').hide();
+    });
+  </script>
 </body>
 </html>
