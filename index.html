@@ -13,6 +13,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+
     <title>WasteX</title>
 </head>
 <body>
@@ -43,7 +44,7 @@
             </p>
             <a id="get_started" href="#about" class="btn" role="button">Get started</a>
           </div>
-          <img id="image" src="images/WasteX.png" alt="" />
+          <img src="images/WasteX.png" alt="" />
         </div>
       </section>
   
@@ -141,61 +142,6 @@
         </div>
         </div>
       </section>
-
-      <section id="works" class="section-w">
-        <div class="container">
-          <div class="overlay">
-        <div class="row Team">
-          <div class="section-w-inner">
-            <h3 class="text-3">How it works?</h3>
-          </div>    
-          <div class="column2">
-            <div class="card2">
-              <h3>Step 1</h3>
-              <lord-icon
-              src="https://cdn.lordicon.com/dxjqoygy.json"
-              trigger="loop"
-              colors="primary:#121331,secondary:#14ee80"
-              style="width:100px;height:100px">
-              </lord-icon>
-              <h5>Create and login to your account.</h5>
-            </div>
-          </div>
-          <div class="column2">
-            <div class="card2">
-              <h3>Step 2</h3>
-              <i class="fas fa-upload fa-2x text-lightblue" aria-hidden="true"></i>
-              <h5>Upload details of the waste you want to recycle or sell.</h5>
-            </div>
-          </div>
-          <div class="column2">
-            <div class="card2">
-              <h3>Step 3</h3>
-              <lord-icon
-                src="https://cdn.lordicon.com/qhviklyi.json"
-                trigger="loop"
-                colors="primary:#121331,secondary:#14ee80"
-                style="width:100px;height:100px">
-              </lord-icon>
-              <h5>Wait for us to pickup your waste.</h5>
-            </div>
-          </div>
-          <div class="column2">
-            <div class="card2">
-              <h3>Step 4</h3>
-              <lord-icon
-    src="https://cdn.lordicon.com/ribdawhq.json"
-    trigger="loop"
-    colors="primary:#121331,secondary:#14ee80"
-    style="width:100px;height:100px">
-</lord-icon>
-              <h5>Leave the rest to us!</h5>
-            </div>
-          </div>
-        </div>
-        </div>
-        </div>
-      </section>
       
   <!-- Team -->
   <section id="team" class="section-c">
@@ -239,7 +185,7 @@
       </div>
     </div>
   </section>
-  <div id="api"></div>
+
   <div class="wrapper">
     <div class="green ball"></div>
     <div class="green ball"></div>
@@ -247,7 +193,6 @@
     <div class="green ball"></div>
     <div class="green ball"></div>
   </div>
-
   
       <!-- Footer -->
       <footer class="section-footer py-4 bg-primary">
@@ -296,36 +241,11 @@
   src="https://code.jquery.com/jquery-3.6.0.min.js"
   integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
   crossorigin="anonymous"></script>
-  <script src="https://cdn.lordicon.com/libs/mssddfmo/lord-icon-2.1.0.js"></script>
+
   <script>
-  fetch('https://api.ipify.org?format=json')
-  .then(response => response.json())
-  .then(data => document.getElementById('api').innerHTML="You have logged in from " + data.ip);
-  // .then(data => console.log(data));
-
-  $("#image").slideUp(2000).slideDown(2000);
-
-//   function AnimateRotate(angle,repeat) {
-//     var duration= 5000;
-//     setTimeout(function() {
-//         if(repeat && repeat == "infinite") {
-//             AnimateRotate(angle,repeat);
-//         } else if ( repeat && repeat > 1) {
-//             AnimateRotate(angle, repeat-1);
-//         }
-//     },duration)    
-//     var $elem = $('#image');
-
-//     $({deg: 0}).animate({deg: angle}, {
-//         duration: duration,
-//         step: function(now) {
-//             $elem.css({
-//                 'transform': 'rotate('+ now +'deg)'
-//             });
-//         }
-//     });
-// }
-// AnimateRotate(360,"infinite");
+    $(document).ready(function() {
+      $('#get_started').show();
+    });
   </script>
 </body>
 </html>
