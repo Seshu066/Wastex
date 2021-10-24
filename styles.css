@@ -167,6 +167,42 @@ img {
   font-size: 1.5rem;
 }
 
+/* works section */
+.section-w {
+  position: relative;
+  background: url(images/works.png) no-repeat bottom center/cover;
+  opacity: 1;
+  background-color: #000;
+  min-height: 95vh;
+}
+
+.section-w-inner {
+  color: rgb(255, 255, 255);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: auto;
+  max-width: 860px;
+  padding: 5rem 0;
+}
+
+.section-w-inner h3 {
+  font-size: 3rem;
+}
+
+.section-w-inner h2 {
+  font-size: 6rem;
+  margin-top: 1rem;
+}
+
+.section-w-inner p {
+  margin-top: 2rem;
+  font-size: 1.5rem;
+}
+
 /* Team section */
 .section-c {
   position: relative;
