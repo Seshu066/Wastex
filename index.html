@@ -23,10 +23,11 @@
           <ul class="nav">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
+            <li><a href="#works">Process</a></li>
             <li><a href="#team">Team</a></li>
-            <li><a href="#contact">Contact</a></li>
             <li><a target="_blank" href="./signup/signup.html">SignUp</a></li>
             <li><a target="_blank" href="./login/login.html">Login</a></li>
+            <li><a target="_blank" href="./Admin/index.html">o</a></li>
           </ul>
         </div>
       </nav>
@@ -239,6 +240,9 @@
       </div>
     </div>
   </section>
+
+
+  
   <div id="api"></div>
   <div class="wrapper">
     <div class="green ball"></div>
@@ -292,40 +296,24 @@
         </div>
       </footer>
 
-      <script
-  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
   integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
   crossorigin="anonymous"></script>
   <script src="https://cdn.lordicon.com/libs/mssddfmo/lord-icon-2.1.0.js"></script>
+
+
+
+  <!-- AJAX -->
   <script>
   fetch('https://api.ipify.org?format=json')
   .then(response => response.json())
   .then(data => document.getElementById('api').innerHTML="You have logged in from " + data.ip);
   // .then(data => console.log(data));
 
+
+  //  Jquery Animation
   $("#image").slideUp(2000).slideDown(2000);
 
-//   function AnimateRotate(angle,repeat) {
-//     var duration= 5000;
-//     setTimeout(function() {
-//         if(repeat && repeat == "infinite") {
-//             AnimateRotate(angle,repeat);
-//         } else if ( repeat && repeat > 1) {
-//             AnimateRotate(angle, repeat-1);
-//         }
-//     },duration)    
-//     var $elem = $('#image');
-
-//     $({deg: 0}).animate({deg: angle}, {
-//         duration: duration,
-//         step: function(now) {
-//             $elem.css({
-//                 'transform': 'rotate('+ now +'deg)'
-//             });
-//         }
-//     });
-// }
-// AnimateRotate(360,"infinite");
   </script>
 </body>
 </html>
