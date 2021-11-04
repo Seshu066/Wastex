@@ -1,4 +1,3 @@
-// This is for able to see chart. We are using Apex Chart. U can check the documentation of Apex Charts too..
 var options = {
     series: [
       {
@@ -16,9 +15,9 @@ var options = {
     ],
     chart: {
       type: "bar",
-      height: 250, // make this 250
+      height: 250,
       sparkline: {
-        enabled: true, // make this true
+        enabled: true,
       },
     },
     plotOptions: {
